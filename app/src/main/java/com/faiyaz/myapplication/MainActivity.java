@@ -17,6 +17,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.faiyaz.myapplication.productsUI.ProductAddActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -29,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnChooseColor;
 
     Button btnSignup;
+
+    Button Add ;
+
+    Button All ;
 
 
 
@@ -47,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab = findViewById(R.id.fab1);
 
         btnSignup = findViewById(R.id.signup);
+
+
+        Add = findViewById(R.id.add);
+        All = findViewById(R.id.all);
+
+
+
+        Add.setOnClickListener(v->{
+
+            Intent intent = new Intent(MainActivity.this, ProductAddActivity.class);
+            startActivity(intent);
+
+        });
+
+
+
 
 
         btnSignup.setOnClickListener(v->{
