@@ -18,6 +18,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.faiyaz.myapplication.productsUI.ProductAddActivity;
+import com.faiyaz.myapplication.productsUI.ProductListActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -77,6 +78,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
 
         });
+
+
+        All.setOnClickListener(v->{
+
+//            Toast.makeText(MainActivity.this,"Signup !!!!!",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, ProductListActivity.class);
+            startActivity(intent);
+
+        });
+
+
 
 
 

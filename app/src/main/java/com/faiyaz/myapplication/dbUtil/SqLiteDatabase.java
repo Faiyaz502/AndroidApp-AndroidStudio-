@@ -32,7 +32,7 @@ public class SqLiteDatabase extends SQLiteOpenHelper {
                 COL_NAME + " TEXT, " +
                 COL_EMAIL + " TEXT, " +
                 COL_PRICE + " REAL, " +
-                COL_QUANTITY + " INTEGER" +
+                COL_QUANTITY + " INTEGER, " + "IMAGE_URI TEXT" +
                 ")";
 
         db.execSQL(query);
@@ -40,6 +40,11 @@ public class SqLiteDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+        if(oldVersion < 2){
+
+            db.execSQL("ALTER TABLE "+TBL_NAME +" ADD COLUMN IMAGE_URI TEXT");
+        }
 
     }
 }
